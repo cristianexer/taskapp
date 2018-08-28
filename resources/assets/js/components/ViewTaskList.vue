@@ -95,7 +95,6 @@
                 }
                 else{
                     this.createComp = false;
-                    
                 }
             },
             reloadTasks: function(){
