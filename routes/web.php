@@ -15,6 +15,8 @@
 //     return view('welcome');
 // });
 
+URL::forceSchema('https');
+
 Auth::routes();
 
 Route::get('/home', 'TaskListController@home');
