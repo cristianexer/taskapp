@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- Favicons --}}
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicons') }}/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons') }}/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons') }}/favicon-16x16.png">
-    <link rel="manifest" href="{{ asset('favicons') }}/site.webmanifest">
-    <link rel="mask-icon" href="{{ asset('favicons') }}/safari-pinned-tab.svg" color="#000000">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ secure_asset('favicons') }}/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ secure_asset('favicons') }}/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ secure_asset('favicons') }}/favicon-16x16.png">
+    <link rel="manifest" href="{{ secure_asset('favicons') }}/site.webmanifest">
+    <link rel="mask-icon" href="{{ secure_asset('favicons') }}/safari-pinned-tab.svg" color="#000000">
     <meta name="apple-mobile-web-app-title" content="taskapp">
     <meta name="application-name" content="taskapp">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ asset('favicons') }}/mstile-144x144.png">
+    <meta name="msapplication-TileImage" content="{{ secure_asset('favicons') }}/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
     {{-- Favicons end --}}
     <!-- CSRF Token -->
@@ -23,21 +23,21 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ secure_asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('favicons') }}/taskapp.png"/>
+                <img src="{{ secure_asset('favicons') }}/taskapp.png"/>
             </a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
