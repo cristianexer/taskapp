@@ -1,10 +1,4 @@
 <?php
-$url = parse_url(getenv("mysql://b52a20c2e8eab7:ce189771@eu-cdbr-west-02.cleardb.net/heroku_af209478e073dd8?reconnect=true"));
-
-$host = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
 
 return [
 
@@ -47,11 +41,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', $host),
+            'host' => env('DB_HOST', 'db4free.net'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', $database),
-            'username' => env('DB_USERNAME', $username),
-            'password' => env('DB_PASSWORD', $password),
+            'database' => env('DB_DATABASE', 'taskappdatabase'),
+            'username' => env('DB_USERNAME', 'taskappexer'),
+            'password' => env('DB_PASSWORD', 'taskappDatabasePassword35'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
