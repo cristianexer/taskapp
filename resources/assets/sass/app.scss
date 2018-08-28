@@ -1,0 +1,198 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,600');
+// Variables
+@import 'variables';
+// Mixins
+@import 'mixins';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.taskListBody {
+    border: 1px solid #eee;
+    box-shadow: -1px 1px 2px 1px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.btn-full {
+    color: #333;
+    width: 100%;
+    border-top: 1px solid #eee;
+}
+
+.btn-round {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 0;
+}
+
+@include keyframes(scaleUpDown) {
+    0% {}
+    10% {
+        @include transform(scale(0.9));
+    }
+    25% {
+        @include transform(scale(0.8));
+    }
+    50% {
+        @include transform(scale(1.2));
+    }
+    75% {
+        @include transform(scale(1.1));
+    }
+    100% {
+        @include transform(scale(1));
+    }
+}
+
+.navbar-brand {
+    position: absolute;
+    &:hover {
+        @include animation('scaleUpDown 4s 1');
+    }
+    img {
+        width: 175px;
+        @include animation('scaleUpDown 1s 1');
+    }
+}
+
+.fade-enter-active{
+  @include transform(scale(1));
+  @include animate(all,720ms);
+}
+.fade-leave-active {
+  @include transform(scale(1));
+  @include animate(all,720ms);
+}
+.fade-enter{
+  @include transform(scale(0));
+  @include animate(all,720ms);
+  opacity: 0;
+  display:block;
+}
+.fade-leave-to {
+  @include transform(scale(0));
+  @include animate(all,720ms);
+  opacity: 0;
+  display:none;
+}
+
+.taskWrapper {
+    .tasklink {
+        text-decoration: none;
+        cursor: pointer;
+        .taskBody {
+            border: 1px solid rgba(238, 238, 238, 0.918);
+            box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            -ms-border-radius: 12px;
+            -o-border-radius: 12px;
+            background-color: #fff;
+            color: #333;
+        }
+    }
+}
+
+.iconParent {
+    background-color: #fff;
+    color: #333;
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    text-align: center;
+    line-height: 2rem;
+    vertical-align: middle;
+    margin: 0 auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+    @include animate(all,
+    320ms);
+    &:hover {
+        background-color: #333;
+        color: #fff;
+    }
+}
+
+
+
+.taskListCreate{
+    .linkBody{
+        border: 1px solid #aaa;
+        border-radius: 2px;
+        @include animate(all,320ms);
+        .createTaskLink{
+        font-size: 1.2rem;
+        text-align:center;
+        vertical-align:middle;
+        padding: 1rem 0;
+        display:block;
+        text-decoration:none;
+        color:#aaa;
+        cursor: pointer;
+        @include animate(all,320ms);
+        svg{
+            font-size:1rem;
+        }
+        
+        }
+        &:hover{
+            .createTaskLink{
+                color:#333;
+            }
+            border-color: #333;
+        }
+    }  
+}
+
+#taskStatus{
+    color:#333;
+}
+
+.createTask{
+    font-size:1.4rem;
+    border:1px solid #aaa;
+    border-radius:2px;
+    cursor:pointer;
+    color:#aaa;
+
+    @include animate(all,320ms);
+
+    &:hover{
+        border-color:#333;
+        color:#333;
+    }
+
+}
+
+
+.badge-warning{
+    color:#aaa;
+}
+.badge-info{
+    color:#fff;
+}
+
+.footer{
+    a{
+        font-size:2rem;
+    }
+}
+
+
+
+
+
+
